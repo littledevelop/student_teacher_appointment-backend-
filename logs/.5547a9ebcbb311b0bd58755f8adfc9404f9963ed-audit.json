@@ -1,0 +1,35 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\.5547a9ebcbb311b0bd58755f8adfc9404f9963ed-audit.json",
+    "files": [
+        {
+            "date": 1768651185945,
+            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\application-2026-01-17.log",
+            "hash": "5f36d47ec5456616157e425c9d43bdbca0ff30408d2e81f08508d42a9b12b9a9"
+        },
+        {
+            "date": 1768903570965,
+            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\application-2026-01-20.log",
+            "hash": "49f4aa6617d4756177ca947762fb8d90a665f6a0ef61e086bb483176d7bc74b6"
+        },
+        {
+            "date": 1768991536712,
+            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\application-2026-01-21.log",
+            "hash": "b839b76727b98366281aed2dc5d5723e5634ae56b0bb618788828b841ee55aa1"
+        },
+        {
+            "date": 1769098598689,
+            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\application-2026-01-22.log",
+            "hash": "da5a15f36d5c1b2fcd2358c1a08d6a2b23330422b2116939c8ea1c8b615c215e"
+        },
+        {
+            "date": 1769682638036,
+            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\application-2026-01-29.log",
+            "hash": "248cd1277a9745d3eed37412b0a49e27d5387a8d84236f20b854e0ed8c5cfa96"
+        }
+    ],
+    "hashType": "sha256"
+}

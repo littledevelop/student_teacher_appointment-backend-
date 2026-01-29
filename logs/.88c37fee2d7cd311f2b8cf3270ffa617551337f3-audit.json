@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\.88c37fee2d7cd311f2b8cf3270ffa617551337f3-audit.json",
+    "files": [
+        {
+            "date": 1768274271362,
+            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\application-2026-01-13.log",
+            "hash": "ad2e4208a14f6379922664ec05de78644a3fda5c147f63c1f88338e1c53f1c69"
+        }
+    ],
+    "hashType": "sha256"
+}
