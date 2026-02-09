@@ -12,7 +12,7 @@ const bookAppointment = async(req,res)=>{
                 action: 'bookAppointment'
             });
             return res.status(401).json({success:false,
-                message:"Only Student can book appontments",
+                message:"Only Student can book appointments",
             });
         }
 
@@ -23,7 +23,7 @@ const bookAppointment = async(req,res)=>{
                 userId: req.user.id,
                 teacherId: teacherId
             });
-            return res.status(400).json({suceess:false,message:"Invalid teacher ID"});
+            return res.status(400).json({success:false,message:"Invalid teacher ID"});
         }
         
         const teacher = await User.findOne({
@@ -38,7 +38,7 @@ const bookAppointment = async(req,res)=>{
                 teacherId: teacherId
             });
             return res.status(400).json({success:false,
-                message:"Teacher not found or inValid",
+                message:"Teacher not found or invalid",
             })
         }
 
@@ -150,7 +150,7 @@ const getTeacherAppointments = async (req, res) => {
 const updateTeacherAppointmentStatus = async (req, res) => {
     try{
         const { id: appointmentId } = req.params;
-        const { status } = req.body;
+        const { status, meetingLink } = req.body;
         
         if(req.user.role !== "teacher"){
             logger.warn('Unauthorized appointment status update attempt', {
@@ -187,6 +187,7 @@ const updateTeacherAppointmentStatus = async (req, res) => {
         
         const oldStatus = appointment.status;
         appointment.status = status;
+        if (meetingLink !== undefined) appointment.meetingLink = meetingLink;
         await appointment.save();
 
         logger.info('Appointment status updated', {
@@ -271,7 +272,7 @@ const getAdminAppointments = async (req, res) => {
         });
     }
     catch(error){
-        logger.error('Error fetching admin appointments:', {
+        logger.error('Error fetching admin appointments', {
             error: error.message,
             stack: error.stack,
             userId: req.user?.id
@@ -365,7 +366,7 @@ const deleteAppointment = async (req, res) => {
 const updateAppointmentByStudents = async (req, res) => {
     try{
         const { id: appointmentId } = req.params;
-        const { date, time, purpose } = req.body;   
+        const { date, time, purpose, status } = req.body;   
         if(req.user.role !== "student"){
             logger.warn('Unauthorized appointment update attempt by student', {
                 userId: req.user.id,
@@ -390,19 +391,23 @@ const updateAppointmentByStudents = async (req, res) => {
         const oldData = {
             date: appointment.date,
             time: appointment.time,
-            purpose: appointment.purpose
+            purpose: appointment.purpose,
+            status: appointment.status
         };
         
-        appointment.date = date || appointment.date;
-        appointment.time = time || appointment.time;
-        appointment.purpose = purpose || appointment.purpose;
+        if (status === 'cancelled') {
+            appointment.status = 'cancelled';
+        }
+        if (date !== undefined) appointment.date = date;
+        if (time !== undefined) appointment.time = time;
+        if (purpose !== undefined) appointment.purpose = purpose;
         await appointment.save();
         
         logger.info('Appointment updated by student', {
             appointmentId,
             studentId: req.user.id,
             oldData,
-            newData: { date: appointment.date, time: appointment.time, purpose: appointment.purpose }
+            newData: { date: appointment.date, time: appointment.time, purpose: appointment.purpose, status: appointment.status }
         });
         
         return res.status(200).json({success:true,
@@ -420,4 +425,4 @@ const updateAppointmentByStudents = async (req, res) => {
 };
 
 
-export { bookAppointment , getTeacherAppointments, updateTeacherAppointmentStatus, getStudentAppointments, getAdminAppointments, getAppointmentById, deleteAppointment, updateAppointmentByStudents}; 
+export { bookAppointment , getTeacherAppointments, updateTeacherAppointmentStatus, getStudentAppointments, getAdminAppointments, getAppointmentById, deleteAppointment, updateAppointmentByStudents };

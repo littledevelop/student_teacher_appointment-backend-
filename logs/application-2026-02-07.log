@@ -1,0 +1,103 @@
+2026-02-07 23:01:17 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:01:21 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-07 23:10:06 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-07 23:10:06 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-07 23:10:06 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-07 23:10:06 [INFO]: Users list retrieved
+2026-02-07 23:10:06 [INFO]: GET /admin/all - Status: 304 - Duration: 128ms
+2026-02-07 23:10:06 [INFO]: Users list retrieved
+2026-02-07 23:10:06 [INFO]: GET /admin/all - Status: 304 - Duration: 136ms
+2026-02-07 23:10:06 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-07 23:10:06 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-07 23:10:07 [INFO]: Users list retrieved
+2026-02-07 23:10:07 [INFO]: GET /admin/all - Status: 304 - Duration: 358ms
+2026-02-07 23:10:07 [INFO]: Users list retrieved
+2026-02-07 23:10:07 [INFO]: GET /admin/all - Status: 304 - Duration: 364ms
+2026-02-07 23:10:07 [INFO]: Admin retrieved all appointments
+2026-02-07 23:10:07 [INFO]: GET /admin/all - Status: 304 - Duration: 990ms
+2026-02-07 23:10:07 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-07 23:10:07 [INFO]: Admin retrieved all appointments
+2026-02-07 23:10:07 [INFO]: GET /admin/all - Status: 304 - Duration: 99ms
+2026-02-07 23:29:35 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:29:35 [INFO]: GET /api/teachers - IP: ::1
+2026-02-07 23:29:35 [INFO]: Teachers list retrieved
+2026-02-07 23:29:35 [INFO]: GET /teachers - Status: 304 - Duration: 107ms
+2026-02-07 23:29:35 [INFO]: GET /api/teachers - IP: ::1
+2026-02-07 23:29:35 [INFO]: Messages retrieved
+2026-02-07 23:29:35 [INFO]: GET / - Status: 304 - Duration: 312ms
+2026-02-07 23:29:35 [INFO]: Teachers list retrieved
+2026-02-07 23:29:35 [INFO]: GET /teachers - Status: 304 - Duration: 196ms
+2026-02-07 23:29:35 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:29:35 [INFO]: Messages retrieved
+2026-02-07 23:29:35 [INFO]: GET / - Status: 304 - Duration: 180ms
+2026-02-07 23:29:48 [INFO]: POST /api/messages/send - IP: ::1
+2026-02-07 23:29:48 [INFO]: Message sent successfully
+2026-02-07 23:29:48 [INFO]: POST /send - Status: 201 - Duration: 94ms
+2026-02-07 23:29:49 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:29:49 [INFO]: Messages retrieved
+2026-02-07 23:29:49 [INFO]: GET / - Status: 200 - Duration: 182ms
+2026-02-07 23:30:05 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:30:05 [INFO]: Messages retrieved
+2026-02-07 23:30:05 [INFO]: GET / - Status: 304 - Duration: 193ms
+2026-02-07 23:30:35 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:30:35 [INFO]: Messages retrieved
+2026-02-07 23:30:35 [INFO]: GET / - Status: 304 - Duration: 233ms
+2026-02-07 23:31:05 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:31:05 [INFO]: Messages retrieved
+2026-02-07 23:31:05 [INFO]: GET / - Status: 304 - Duration: 195ms
+2026-02-07 23:31:35 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:31:35 [INFO]: Messages retrieved
+2026-02-07 23:31:35 [INFO]: GET / - Status: 304 - Duration: 212ms
+2026-02-07 23:32:05 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:32:05 [INFO]: Messages retrieved
+2026-02-07 23:32:05 [INFO]: GET / - Status: 304 - Duration: 231ms
+2026-02-07 23:32:35 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:32:36 [INFO]: Messages retrieved
+2026-02-07 23:32:36 [INFO]: GET / - Status: 304 - Duration: 1163ms
+2026-02-07 23:32:37 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:32:37 [INFO]: GET /api/teachers - IP: ::1
+2026-02-07 23:32:37 [INFO]: Teachers list retrieved
+2026-02-07 23:32:37 [INFO]: GET /teachers - Status: 304 - Duration: 184ms
+2026-02-07 23:32:37 [INFO]: GET /api/teachers - IP: ::1
+2026-02-07 23:32:38 [INFO]: Teachers list retrieved
+2026-02-07 23:32:38 [INFO]: GET /teachers - Status: 304 - Duration: 1292ms
+2026-02-07 23:32:38 [INFO]: Messages retrieved
+2026-02-07 23:32:38 [INFO]: GET / - Status: 304 - Duration: 1531ms
+2026-02-07 23:32:38 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:32:38 [INFO]: Messages retrieved
+2026-02-07 23:32:38 [INFO]: GET / - Status: 304 - Duration: 176ms
+2026-02-07 23:33:07 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:33:07 [INFO]: Messages retrieved
+2026-02-07 23:33:07 [INFO]: GET / - Status: 304 - Duration: 239ms
+2026-02-07 23:33:37 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:33:39 [INFO]: Messages retrieved
+2026-02-07 23:33:39 [INFO]: GET / - Status: 304 - Duration: 1895ms
+2026-02-07 23:34:07 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:34:07 [INFO]: Messages retrieved
+2026-02-07 23:34:07 [INFO]: GET / - Status: 304 - Duration: 238ms
+2026-02-07 23:34:37 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:34:37 [INFO]: Messages retrieved
+2026-02-07 23:34:37 [INFO]: GET / - Status: 304 - Duration: 250ms
+2026-02-07 23:35:07 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:35:08 [INFO]: Messages retrieved
+2026-02-07 23:35:08 [INFO]: GET / - Status: 304 - Duration: 452ms
+2026-02-07 23:35:37 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:35:38 [INFO]: Messages retrieved
+2026-02-07 23:35:38 [INFO]: GET / - Status: 304 - Duration: 781ms
+2026-02-07 23:40:12 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:40:35 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:40:45 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:41:12 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-07 23:41:26 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:41:29 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:41:35 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:43:27 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-07 23:44:16 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:44:21 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:44:24 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:44:41 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:44:46 [INFO]: GET /api/messages - IP: ::1
+2026-02-07 23:44:53 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:45:12 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-07 23:45:39 [INFO]: 🚀 Server running on PORT 8000
+2026-02-07 23:45:49 [INFO]: ✅ MongoDB Connected Successfully

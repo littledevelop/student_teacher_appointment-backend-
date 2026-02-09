@@ -4,7 +4,7 @@ import logger from "../logger/logger.js";
 const sendMessage = async (req, res) => {
   try {
     const { receiver, subject, content, appointment } = req.body;
-    const sender = req.user.userId;
+    const sender = req.user.id;
     console.log(sender)
     // Validation
     if (!receiver || !subject || !content) {
@@ -63,7 +63,7 @@ const sendMessage = async (req, res) => {
 
 const getMessages = async (req, res) => {
   try {
-    const userId = req.user.userId;
+    const userId = req.user.id;
     const { page = 1, limit = 10, unreadOnly = false } = req.query;
 
     let query = {
@@ -120,7 +120,7 @@ const getMessages = async (req, res) => {
 const markMessageAsRead = async (req, res) => {
   try {
     const { messageId } = req.params;
-    const userId = req.user.userId;
+    const userId = req.user.id;
 
     const message = await Message.findOneAndUpdate(
       { _id: messageId, receiver: userId },
@@ -157,7 +157,7 @@ const markMessageAsRead = async (req, res) => {
 const deleteMessage = async (req, res) => {
   try {
     const { messageId } = req.params;
-    const userId = req.user.userId;
+    const userId = req.user.id;
 
     const message = await Message.findOneAndDelete({
       _id: messageId,
@@ -195,7 +195,7 @@ const deleteMessage = async (req, res) => {
 
 const getUnreadCount = async (req, res) => {
   try {
-    const userId = req.user.userId;
+    const userId = req.user.id;
 
     const unreadCount = await Message.countDocuments({
       receiver: userId,
@@ -216,4 +216,163 @@ const getUnreadCount = async (req, res) => {
   }
 };
 
-export { sendMessage, getMessages, markMessageAsRead, deleteMessage, getUnreadCount };
+const getConversations = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const { page = 1, limit = 20 } = req.query;
+
+    // Get all messages involving the user
+    const messages = await Message.find({
+      $or: [
+        { sender: userId },
+        { receiver: userId }
+      ]
+    })
+    .populate('sender', 'name email role')
+    .populate('receiver', 'name email role')
+    .sort({ createdAt: -1 });
+
+    // Group messages by conversation (other participant)
+    const conversationsMap = new Map();
+
+    messages.forEach(message => {
+      const otherUser = message.sender._id.toString() === userId.toString()
+        ? message.receiver
+        : message.sender;
+
+      const conversationKey = otherUser._id.toString();
+
+      if (!conversationsMap.has(conversationKey)) {
+        conversationsMap.set(conversationKey, {
+          otherUser,
+          messages: [],
+          lastMessage: message,
+          unreadCount: 0
+        });
+      }
+
+      const conversation = conversationsMap.get(conversationKey);
+      conversation.messages.push(message);
+
+      // Count unread messages
+      if (message.receiver._id.toString() === userId.toString() && !message.isRead) {
+        conversation.unreadCount++;
+      }
+
+      // Update last message if this is more recent
+      if (message.createdAt > conversation.lastMessage.createdAt) {
+        conversation.lastMessage = message;
+      }
+    });
+
+    // Convert to array and sort by last message time
+    const conversations = Array.from(conversationsMap.values())
+      .map(conv => ({
+        otherUser: conv.otherUser,
+        lastMessage: conv.lastMessage,
+        unreadCount: conv.unreadCount,
+        messageCount: conv.messages.length
+      }))
+      .sort((a, b) => b.lastMessage.createdAt - a.lastMessage.createdAt);
+
+    // Pagination
+    const startIndex = (page - 1) * limit;
+    const endIndex = startIndex + parseInt(limit);
+    const paginatedConversations = conversations.slice(startIndex, endIndex);
+
+    logger.info('Conversations retrieved', {
+      userId,
+      totalConversations: conversations.length,
+      returnedConversations: paginatedConversations.length
+    });
+
+    res.status(200).json({
+      success: true,
+      conversations: paginatedConversations,
+      pagination: {
+        page: parseInt(page),
+        limit: parseInt(limit),
+        total: conversations.length,
+        pages: Math.ceil(conversations.length / limit)
+      }
+    });
+  } catch (error) {
+    logger.error('Error fetching conversations:', {
+      error: error.message,
+      stack: error.stack,
+      userId: req.user?.userId
+    });
+    res.status(500).json({ success: false, message: "Server Error" });
+  }
+};
+
+const getConversationMessages = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const { otherUserId } = req.params;
+    const { page = 1, limit = 50 } = req.query;
+
+    // Validate otherUserId
+    if (!mongoose.Types.ObjectId.isValid(otherUserId)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid user ID format"
+      });
+    }
+
+    const skip = (page - 1) * limit;
+
+    const messages = await Message.find({
+      $or: [
+        { sender: userId, receiver: otherUserId },
+        { sender: otherUserId, receiver: userId }
+      ]
+    })
+    .populate('sender', 'name email role')
+    .populate('receiver', 'name email role')
+    .sort({ createdAt: -1 })
+    .skip(skip)
+    .limit(parseInt(limit));
+
+    const total = await Message.countDocuments({
+      $or: [
+        { sender: userId, receiver: otherUserId },
+        { sender: otherUserId, receiver: userId }
+      ]
+    });
+
+    // Mark messages as read
+    await Message.updateMany(
+      { sender: otherUserId, receiver: userId, isRead: false },
+      { isRead: true, readAt: new Date() }
+    );
+
+    logger.info('Conversation messages retrieved', {
+      userId,
+      otherUserId,
+      count: messages.length,
+      total
+    });
+
+    res.status(200).json({
+      success: true,
+      messages: messages.reverse(), // Return in chronological order
+      pagination: {
+        page: parseInt(page),
+        limit: parseInt(limit),
+        total,
+        pages: Math.ceil(total / limit)
+      }
+    });
+  } catch (error) {
+    logger.error('Error fetching conversation messages:', {
+      error: error.message,
+      stack: error.stack,
+      userId: req.user?.userId,
+      otherUserId: req.params?.otherUserId
+    });
+    res.status(500).json({ success: false, message: "Server Error" });
+  }
+};
+
+export { sendMessage, getMessages, markMessageAsRead, deleteMessage, getUnreadCount, getConversations, getConversationMessages };

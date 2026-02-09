@@ -1,0 +1,57 @@
+2026-02-06 10:15:40 [INFO]: 🚀 Server running on PORT 8000
+2026-02-06 10:15:44 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-06 10:18:28 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-06 10:18:28 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-06 10:18:28 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-06 10:18:28 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-06 10:18:28 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-06 10:18:28 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-06 10:18:28 [INFO]: Admin retrieved all appointments
+2026-02-06 10:18:28 [INFO]: GET /admin/all - Status: 200 - Duration: 612ms
+2026-02-06 10:18:28 [INFO]: Users list retrieved
+2026-02-06 10:18:28 [INFO]: GET /admin/all - Status: 200 - Duration: 586ms
+2026-02-06 10:18:28 [INFO]: Users list retrieved
+2026-02-06 10:18:28 [INFO]: GET /admin/all - Status: 200 - Duration: 586ms
+2026-02-06 10:18:29 [INFO]: Users list retrieved
+2026-02-06 10:18:29 [INFO]: GET /admin/all - Status: 200 - Duration: 955ms
+2026-02-06 10:18:30 [INFO]: GET /api/teachers - IP: ::1
+2026-02-06 10:18:30 [INFO]: GET /api/messages - IP: ::1
+2026-02-06 10:18:31 [INFO]: Teachers list retrieved
+2026-02-06 10:18:31 [INFO]: GET /teachers - Status: 304 - Duration: 841ms
+2026-02-06 10:18:31 [INFO]: GET /api/teachers - IP: ::1
+2026-02-06 10:18:31 [INFO]: Users list retrieved
+2026-02-06 10:18:31 [INFO]: GET /admin/all - Status: 200 - Duration: 3222ms
+2026-02-06 10:18:31 [INFO]: Messages retrieved
+2026-02-06 10:18:31 [INFO]: GET / - Status: 304 - Duration: 1329ms
+2026-02-06 10:18:31 [INFO]: Teachers list retrieved
+2026-02-06 10:18:31 [INFO]: GET /teachers - Status: 304 - Duration: 491ms
+2026-02-06 10:18:31 [INFO]: GET /api/messages - IP: ::1
+2026-02-06 10:18:32 [INFO]: Messages retrieved
+2026-02-06 10:18:32 [INFO]: GET / - Status: 304 - Duration: 989ms
+2026-02-06 10:18:33 [INFO]: Admin retrieved all appointments
+2026-02-06 10:18:33 [INFO]: GET /admin/all - Status: 200 - Duration: 5367ms
+2026-02-06 10:25:45 [WARN]: MongoDB disconnected
+2026-02-06 10:25:56 [INFO]: MongoDB reconnected
+2026-02-06 10:26:28 [INFO]: 🚀 Server running on PORT 8000
+2026-02-06 10:26:34 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-06 10:26:57 [INFO]: 🚀 Server running on PORT 8000
+2026-02-06 10:27:03 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-06 10:27:25 [INFO]: 🚀 Server running on PORT 8000
+2026-02-06 10:27:29 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-06 10:38:24 [INFO]: GET /api/messages - IP: ::1
+2026-02-06 10:38:24 [INFO]: GET /api/teachers - IP: ::1
+2026-02-06 10:38:24 [INFO]: Teachers list retrieved
+2026-02-06 10:38:24 [INFO]: GET /teachers - Status: 304 - Duration: 93ms
+2026-02-06 10:38:24 [INFO]: GET /api/teachers - IP: ::1
+2026-02-06 10:38:24 [INFO]: Teachers list retrieved
+2026-02-06 10:38:24 [INFO]: GET /teachers - Status: 304 - Duration: 224ms
+2026-02-06 10:38:24 [INFO]: Messages retrieved
+2026-02-06 10:38:24 [INFO]: GET / - Status: 304 - Duration: 574ms
+2026-02-06 10:38:24 [INFO]: GET /api/messages - IP: ::1
+2026-02-06 10:38:24 [INFO]: Messages retrieved
+2026-02-06 10:38:24 [INFO]: GET / - Status: 304 - Duration: 269ms
+2026-02-06 10:56:37 [INFO]: MongoDB reconnected
+2026-02-06 10:56:37 [INFO]: MongoDB reconnected
+2026-02-06 10:56:47 [WARN]: MongoDB disconnected
+2026-02-06 10:56:49 [INFO]: MongoDB reconnected
+2026-02-06 10:56:50 [INFO]: 🚀 Server running on PORT 8000

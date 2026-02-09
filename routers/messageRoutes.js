@@ -4,7 +4,9 @@ import {
   getMessages,
   markMessageAsRead,
   deleteMessage,
-  getUnreadCount
+  getUnreadCount,
+  getConversations,
+  getConversationMessages
 } from "../controllers/messageController.js";
 import { protect } from "../middlewares/authMiddleware.js";
 
@@ -15,6 +17,8 @@ messageRouter.use(protect);
 
 messageRouter.post('/send', sendMessage);
 messageRouter.get('/', getMessages);
+messageRouter.get('/conversations', getConversations);
+messageRouter.get('/conversation/:otherUserId', getConversationMessages);
 messageRouter.put('/:messageId/read', markMessageAsRead);
 messageRouter.delete('/:messageId', deleteMessage);
 messageRouter.get('/unread/count', getUnreadCount);

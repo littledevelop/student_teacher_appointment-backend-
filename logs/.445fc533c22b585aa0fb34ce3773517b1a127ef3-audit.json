@@ -6,29 +6,24 @@
     "auditLog": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\.445fc533c22b585aa0fb34ce3773517b1a127ef3-audit.json",
     "files": [
         {
-            "date": 1768651185939,
-            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\error-2026-01-17.log",
-            "hash": "b59c44cfc19cb9d75d985a388867a738c36e74bb79d50878ca3c2a693c7dae9f"
-        },
-        {
-            "date": 1768903570958,
-            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\error-2026-01-20.log",
-            "hash": "5410d22cad4811be6fa73a8a543378591fe19a280f2a33df85896290a1bf1383"
-        },
-        {
-            "date": 1768991536699,
-            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\error-2026-01-21.log",
-            "hash": "b46ced5ec1e59c1390ea3f6011555e8e7cf153634d7357e8c78cf8cb6f020d72"
-        },
-        {
-            "date": 1769098598681,
-            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\error-2026-01-22.log",
-            "hash": "d035f87ffc31cd04c62c0ab4210facb5b6e624a5cab898b6f22bc338555a651c"
-        },
-        {
             "date": 1769682638030,
             "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\error-2026-01-29.log",
             "hash": "e1929db85bea434c85cdfbdefda0ba5b76dc32ab988b9e5a463266436427cb2b"
+        },
+        {
+            "date": 1770294845489,
+            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\error-2026-02-05.log",
+            "hash": "8c76f84f969a06aaacd100696b298f4b1418f4f54cc1f92409ea24bffbe9b1eb"
+        },
+        {
+            "date": 1770353140184,
+            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\error-2026-02-06.log",
+            "hash": "0e669ec0c831f4750f3764ed9b00c1c51f99cbebfabb25aa8fdabc1160d2fcca"
+        },
+        {
+            "date": 1770485477254,
+            "name": "C:\\proj\\unified mentor\\student_teacher_appointment\\backend\\logs\\error-2026-02-07.log",
+            "hash": "97d91617850d6baf2cf7f561bc28449bd88b7ac53d08c823ddaddb87678b74bc"
         }
     ],
     "hashType": "sha256"

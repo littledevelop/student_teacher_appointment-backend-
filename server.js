@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv  from "dotenv";
 import connectDB from "./config/db.js";
-import userRouters from "./routers/userRouters.js";
+import userRoutes from "./routers/userRoutes.js";
 import adminRouter from "./routers/adminRoutes.js";
 import appointmentRouter from "./routers/appointmentRoutes.js";
 import messageRouter from "./routers/messageRoutes.js";
@@ -25,7 +25,7 @@ app.get("/",(req,res)=>{
     res.send("Student-Teacher Appointment API Running");
 })
 
-app.use("/api", userRouters);
+app.use("/api", userRoutes);
 app.use("/api/admin", adminRouter);
 app.use("/api/appointments", appointmentRouter);
 app.use("/api/messages", messageRouter);

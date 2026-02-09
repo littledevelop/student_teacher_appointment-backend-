@@ -1,5 +1,5 @@
 import express from "express";
-import {bookAppointment,getStudentAppointments,getTeacherAppointments,updateTeacherAppointmentStatus, updateAppointmentByStudents, getAppointmentById, getAdminAppointments, deleteAppointment} from '../controllers/appointmentControlller.js';
+import {bookAppointment,getStudentAppointments,getTeacherAppointments,updateTeacherAppointmentStatus, updateAppointmentByStudents, getAppointmentById, getAdminAppointments, deleteAppointment} from '../controllers/appointmentController.js';
 import { protect, adminOnly } from "../middlewares/authMiddleware.js";
 
 const appointmentRouter = express.Router();

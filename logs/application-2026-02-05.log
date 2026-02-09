@@ -1,0 +1,287 @@
+2026-02-05 18:04:05 [INFO]: 🚀 Server running on PORT 8000
+2026-02-05 18:04:09 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-05 18:17:23 [INFO]: 🚀 Server running on PORT 8000
+2026-02-05 18:17:26 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-05 18:17:34 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-05 18:17:34 [ERROR]: Authentication error:
+2026-02-05 18:17:34 [WARN]: GET /admin/all - Status: 401 - Duration: 13ms
+2026-02-05 18:17:34 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-05 18:17:34 [ERROR]: Authentication error:
+2026-02-05 18:17:34 [WARN]: GET /admin/all - Status: 401 - Duration: 10ms
+2026-02-05 18:17:34 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:17:34 [ERROR]: Authentication error:
+2026-02-05 18:17:34 [WARN]: GET /admin/all - Status: 401 - Duration: 7ms
+2026-02-05 18:17:34 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:17:34 [ERROR]: Authentication error:
+2026-02-05 18:17:34 [WARN]: GET /admin/all - Status: 401 - Duration: 9ms
+2026-02-05 18:17:34 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:17:34 [ERROR]: Authentication error:
+2026-02-05 18:17:34 [WARN]: GET /admin/all - Status: 401 - Duration: 5ms
+2026-02-05 18:17:34 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:17:34 [ERROR]: Authentication error:
+2026-02-05 18:17:34 [WARN]: GET /admin/all - Status: 401 - Duration: 4ms
+2026-02-05 18:17:41 [INFO]: POST /api/login - IP: ::1
+2026-02-05 18:17:41 [INFO]: User logged in successfully
+2026-02-05 18:17:41 [INFO]: POST /login - Status: 201 - Duration: 314ms
+2026-02-05 18:17:41 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-05 18:17:41 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:17:41 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:17:42 [INFO]: Users list retrieved
+2026-02-05 18:17:42 [INFO]: GET /admin/all - Status: 200 - Duration: 145ms
+2026-02-05 18:17:42 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:17:42 [INFO]: Users list retrieved
+2026-02-05 18:17:42 [INFO]: GET /admin/all - Status: 200 - Duration: 357ms
+2026-02-05 18:17:42 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:17:42 [INFO]: Users list retrieved
+2026-02-05 18:17:42 [INFO]: GET /admin/all - Status: 304 - Duration: 260ms
+2026-02-05 18:17:42 [INFO]: Users list retrieved
+2026-02-05 18:17:42 [INFO]: GET /admin/all - Status: 304 - Duration: 108ms
+2026-02-05 18:17:42 [INFO]: Admin retrieved all appointments
+2026-02-05 18:17:42 [INFO]: GET /admin/all - Status: 200 - Duration: 620ms
+2026-02-05 18:17:42 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-05 18:17:42 [INFO]: Admin retrieved all appointments
+2026-02-05 18:17:42 [INFO]: GET /admin/all - Status: 304 - Duration: 408ms
+2026-02-05 18:17:44 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:17:44 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:17:45 [INFO]: Teachers list retrieved
+2026-02-05 18:17:45 [INFO]: GET /teachers - Status: 200 - Duration: 261ms
+2026-02-05 18:17:45 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:17:45 [INFO]: Teachers list retrieved
+2026-02-05 18:17:45 [INFO]: GET /teachers - Status: 304 - Duration: 221ms
+2026-02-05 18:17:45 [INFO]: Messages retrieved
+2026-02-05 18:17:45 [INFO]: GET / - Status: 200 - Duration: 500ms
+2026-02-05 18:17:45 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:17:45 [INFO]: Messages retrieved
+2026-02-05 18:17:45 [INFO]: GET / - Status: 304 - Duration: 272ms
+2026-02-05 18:17:54 [INFO]: POST /api/messages/send - IP: ::1
+2026-02-05 18:17:54 [ERROR]: Error sending message:
+2026-02-05 18:17:54 [WARN]: POST /send - Status: 500 - Duration: 40ms
+2026-02-05 18:18:59 [INFO]: 🚀 Server running on PORT 8000
+2026-02-05 18:19:02 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-05 18:19:07 [INFO]: 🚀 Server running on PORT 8000
+2026-02-05 18:19:10 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-05 18:19:12 [INFO]: 🚀 Server running on PORT 8000
+2026-02-05 18:19:15 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-05 18:19:29 [INFO]: 🚀 Server running on PORT 8000
+2026-02-05 18:19:32 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-05 18:20:33 [INFO]: 🚀 Server running on PORT 8000
+2026-02-05 18:20:36 [INFO]: ✅ MongoDB Connected Successfully
+2026-02-05 18:20:49 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-05 18:20:49 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:20:49 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:20:49 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-05 18:20:49 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:20:49 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:20:49 [INFO]: Admin retrieved all appointments
+2026-02-05 18:20:49 [INFO]: GET /admin/all - Status: 200 - Duration: 187ms
+2026-02-05 18:20:49 [INFO]: Users list retrieved
+2026-02-05 18:20:49 [INFO]: GET /admin/all - Status: 200 - Duration: 272ms
+2026-02-05 18:20:49 [INFO]: Users list retrieved
+2026-02-05 18:20:49 [INFO]: GET /admin/all - Status: 200 - Duration: 279ms
+2026-02-05 18:20:49 [INFO]: Users list retrieved
+2026-02-05 18:20:49 [INFO]: GET /admin/all - Status: 200 - Duration: 259ms
+2026-02-05 18:20:50 [INFO]: Users list retrieved
+2026-02-05 18:20:50 [INFO]: GET /admin/all - Status: 200 - Duration: 1268ms
+2026-02-05 18:20:50 [INFO]: Admin retrieved all appointments
+2026-02-05 18:20:50 [INFO]: GET /admin/all - Status: 200 - Duration: 1289ms
+2026-02-05 18:20:51 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:20:51 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:20:51 [INFO]: Teachers list retrieved
+2026-02-05 18:20:51 [INFO]: GET /teachers - Status: 304 - Duration: 149ms
+2026-02-05 18:20:51 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:20:51 [INFO]: Messages retrieved
+2026-02-05 18:20:51 [INFO]: GET / - Status: 304 - Duration: 198ms
+2026-02-05 18:20:51 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:20:51 [INFO]: Teachers list retrieved
+2026-02-05 18:20:51 [INFO]: GET /teachers - Status: 304 - Duration: 51ms
+2026-02-05 18:20:51 [INFO]: Messages retrieved
+2026-02-05 18:20:51 [INFO]: GET / - Status: 304 - Duration: 93ms
+2026-02-05 18:20:57 [INFO]: POST /api/messages/send - IP: ::1
+2026-02-05 18:20:57 [INFO]: Message sent successfully
+2026-02-05 18:20:57 [INFO]: POST /send - Status: 201 - Duration: 92ms
+2026-02-05 18:20:57 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:20:58 [INFO]: Messages retrieved
+2026-02-05 18:20:58 [INFO]: GET / - Status: 200 - Duration: 506ms
+2026-02-05 18:21:19 [INFO]: POST /api/login - IP: ::1
+2026-02-05 18:21:20 [INFO]: User logged in successfully
+2026-02-05 18:21:20 [INFO]: POST /login - Status: 201 - Duration: 417ms
+2026-02-05 18:21:20 [INFO]: GET /api/appointments/teacher - IP: ::1
+2026-02-05 18:21:20 [INFO]: Teacher appointments retrieved
+2026-02-05 18:21:20 [INFO]: GET /teacher - Status: 200 - Duration: 104ms
+2026-02-05 18:21:20 [INFO]: GET /api/appointments/teacher - IP: ::1
+2026-02-05 18:21:20 [INFO]: Teacher appointments retrieved
+2026-02-05 18:21:20 [INFO]: GET /teacher - Status: 304 - Duration: 100ms
+2026-02-05 18:21:23 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:21:23 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:21:24 [INFO]: Teachers list retrieved
+2026-02-05 18:21:24 [INFO]: GET /teachers - Status: 304 - Duration: 229ms
+2026-02-05 18:21:24 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:21:24 [INFO]: Teachers list retrieved
+2026-02-05 18:21:24 [INFO]: GET /teachers - Status: 304 - Duration: 101ms
+2026-02-05 18:21:24 [INFO]: Messages retrieved
+2026-02-05 18:21:24 [INFO]: GET / - Status: 304 - Duration: 397ms
+2026-02-05 18:21:24 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:21:24 [INFO]: Messages retrieved
+2026-02-05 18:21:24 [INFO]: GET / - Status: 304 - Duration: 247ms
+2026-02-05 18:21:29 [INFO]: POST /api/messages/send - IP: ::1
+2026-02-05 18:21:29 [INFO]: Message sent successfully
+2026-02-05 18:21:29 [INFO]: POST /send - Status: 201 - Duration: 109ms
+2026-02-05 18:21:30 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:21:30 [INFO]: Messages retrieved
+2026-02-05 18:21:30 [INFO]: GET / - Status: 200 - Duration: 354ms
+2026-02-05 18:21:41 [INFO]: POST /api/login - IP: ::1
+2026-02-05 18:21:41 [INFO]: User logged in successfully
+2026-02-05 18:21:41 [INFO]: POST /login - Status: 201 - Duration: 245ms
+2026-02-05 18:21:41 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-05 18:21:41 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:21:41 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:21:42 [INFO]: Users list retrieved
+2026-02-05 18:21:42 [INFO]: GET /admin/all - Status: 304 - Duration: 318ms
+2026-02-05 18:21:42 [INFO]: Users list retrieved
+2026-02-05 18:21:42 [INFO]: GET /admin/all - Status: 304 - Duration: 315ms
+2026-02-05 18:21:42 [INFO]: Admin retrieved all appointments
+2026-02-05 18:21:42 [INFO]: GET /admin/all - Status: 304 - Duration: 329ms
+2026-02-05 18:21:42 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:21:42 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:21:42 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-05 18:21:42 [INFO]: Users list retrieved
+2026-02-05 18:21:42 [INFO]: GET /admin/all - Status: 304 - Duration: 394ms
+2026-02-05 18:21:42 [INFO]: Admin retrieved all appointments
+2026-02-05 18:21:42 [INFO]: GET /admin/all - Status: 304 - Duration: 393ms
+2026-02-05 18:21:42 [INFO]: Users list retrieved
+2026-02-05 18:21:42 [INFO]: GET /admin/all - Status: 304 - Duration: 407ms
+2026-02-05 18:21:44 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:21:44 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:21:44 [INFO]: Teachers list retrieved
+2026-02-05 18:21:44 [INFO]: GET /teachers - Status: 304 - Duration: 168ms
+2026-02-05 18:21:44 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:21:44 [INFO]: Teachers list retrieved
+2026-02-05 18:21:44 [INFO]: GET /teachers - Status: 304 - Duration: 202ms
+2026-02-05 18:21:44 [INFO]: Messages retrieved
+2026-02-05 18:21:44 [INFO]: GET / - Status: 200 - Duration: 580ms
+2026-02-05 18:21:44 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:21:45 [INFO]: Messages retrieved
+2026-02-05 18:21:45 [INFO]: GET / - Status: 304 - Duration: 507ms
+2026-02-05 18:21:53 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:21:53 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:21:53 [INFO]: Teachers list retrieved
+2026-02-05 18:21:53 [INFO]: GET /teachers - Status: 304 - Duration: 188ms
+2026-02-05 18:21:53 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:21:54 [INFO]: Teachers list retrieved
+2026-02-05 18:21:54 [INFO]: GET /teachers - Status: 304 - Duration: 197ms
+2026-02-05 18:21:54 [INFO]: Messages retrieved
+2026-02-05 18:21:54 [INFO]: GET / - Status: 304 - Duration: 459ms
+2026-02-05 18:21:54 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:21:54 [INFO]: Messages retrieved
+2026-02-05 18:21:54 [INFO]: GET / - Status: 304 - Duration: 412ms
+2026-02-05 18:22:04 [INFO]: POST /api/login - IP: ::1
+2026-02-05 18:22:04 [INFO]: User logged in successfully
+2026-02-05 18:22:04 [INFO]: POST /login - Status: 201 - Duration: 227ms
+2026-02-05 18:22:04 [INFO]: GET /api/appointments/teacher - IP: ::1
+2026-02-05 18:22:04 [INFO]: Teacher appointments retrieved
+2026-02-05 18:22:04 [INFO]: GET /teacher - Status: 304 - Duration: 147ms
+2026-02-05 18:22:04 [INFO]: GET /api/appointments/teacher - IP: ::1
+2026-02-05 18:22:04 [INFO]: Teacher appointments retrieved
+2026-02-05 18:22:04 [INFO]: GET /teacher - Status: 304 - Duration: 203ms
+2026-02-05 18:22:07 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:22:07 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:22:08 [INFO]: Teachers list retrieved
+2026-02-05 18:22:08 [INFO]: GET /teachers - Status: 304 - Duration: 149ms
+2026-02-05 18:22:08 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:22:08 [INFO]: Teachers list retrieved
+2026-02-05 18:22:08 [INFO]: GET /teachers - Status: 304 - Duration: 79ms
+2026-02-05 18:22:08 [INFO]: Messages retrieved
+2026-02-05 18:22:08 [INFO]: GET / - Status: 200 - Duration: 284ms
+2026-02-05 18:22:08 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:22:08 [INFO]: Messages retrieved
+2026-02-05 18:22:08 [INFO]: GET / - Status: 304 - Duration: 251ms
+2026-02-05 18:22:21 [INFO]: POST /api/messages/send - IP: ::1
+2026-02-05 18:22:21 [INFO]: Message sent successfully
+2026-02-05 18:22:21 [INFO]: POST /send - Status: 201 - Duration: 152ms
+2026-02-05 18:22:22 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:22:22 [INFO]: Messages retrieved
+2026-02-05 18:22:22 [INFO]: GET / - Status: 200 - Duration: 239ms
+2026-02-05 18:22:46 [INFO]: POST /api/login - IP: ::1
+2026-02-05 18:22:46 [INFO]: User logged in successfully
+2026-02-05 18:22:46 [INFO]: POST /login - Status: 201 - Duration: 336ms
+2026-02-05 18:22:46 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-05 18:22:46 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:22:46 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:22:46 [INFO]: Users list retrieved
+2026-02-05 18:22:46 [INFO]: GET /admin/all - Status: 304 - Duration: 430ms
+2026-02-05 18:22:46 [INFO]: Admin retrieved all appointments
+2026-02-05 18:22:46 [INFO]: GET /admin/all - Status: 304 - Duration: 446ms
+2026-02-05 18:22:46 [INFO]: Users list retrieved
+2026-02-05 18:22:46 [INFO]: GET /admin/all - Status: 304 - Duration: 443ms
+2026-02-05 18:22:46 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:22:46 [INFO]: GET /api/appointments/admin/all - IP: ::1
+2026-02-05 18:22:46 [INFO]: GET /api/admin/all - IP: ::1
+2026-02-05 18:22:46 [INFO]: Users list retrieved
+2026-02-05 18:22:46 [INFO]: GET /admin/all - Status: 304 - Duration: 79ms
+2026-02-05 18:22:46 [INFO]: Admin retrieved all appointments
+2026-02-05 18:22:46 [INFO]: GET /admin/all - Status: 304 - Duration: 87ms
+2026-02-05 18:22:46 [INFO]: Users list retrieved
+2026-02-05 18:22:46 [INFO]: GET /admin/all - Status: 304 - Duration: 96ms
+2026-02-05 18:22:48 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:22:48 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:22:48 [INFO]: Teachers list retrieved
+2026-02-05 18:22:48 [INFO]: GET /teachers - Status: 304 - Duration: 207ms
+2026-02-05 18:22:48 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:22:48 [INFO]: Teachers list retrieved
+2026-02-05 18:22:48 [INFO]: GET /teachers - Status: 304 - Duration: 199ms
+2026-02-05 18:22:48 [INFO]: Messages retrieved
+2026-02-05 18:22:48 [INFO]: GET / - Status: 200 - Duration: 476ms
+2026-02-05 18:22:48 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:22:48 [INFO]: Messages retrieved
+2026-02-05 18:22:48 [INFO]: GET / - Status: 304 - Duration: 262ms
+2026-02-05 18:22:57 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:22:57 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:22:57 [INFO]: Teachers list retrieved
+2026-02-05 18:22:57 [INFO]: GET /teachers - Status: 304 - Duration: 55ms
+2026-02-05 18:22:57 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:22:57 [INFO]: Teachers list retrieved
+2026-02-05 18:22:57 [INFO]: GET /teachers - Status: 304 - Duration: 36ms
+2026-02-05 18:22:57 [INFO]: Messages retrieved
+2026-02-05 18:22:57 [INFO]: GET / - Status: 304 - Duration: 173ms
+2026-02-05 18:22:57 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:22:57 [INFO]: Messages retrieved
+2026-02-05 18:22:57 [INFO]: GET / - Status: 304 - Duration: 243ms
+2026-02-05 18:23:09 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:23:09 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:23:09 [INFO]: Teachers list retrieved
+2026-02-05 18:23:09 [INFO]: GET /teachers - Status: 304 - Duration: 72ms
+2026-02-05 18:23:09 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:23:09 [INFO]: Teachers list retrieved
+2026-02-05 18:23:09 [INFO]: GET /teachers - Status: 304 - Duration: 203ms
+2026-02-05 18:23:09 [INFO]: Messages retrieved
+2026-02-05 18:23:09 [INFO]: GET / - Status: 304 - Duration: 337ms
+2026-02-05 18:23:09 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:23:10 [INFO]: Messages retrieved
+2026-02-05 18:23:10 [INFO]: GET / - Status: 304 - Duration: 515ms
+2026-02-05 18:25:05 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:25:05 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:25:05 [INFO]: Teachers list retrieved
+2026-02-05 18:25:05 [INFO]: GET /teachers - Status: 304 - Duration: 78ms
+2026-02-05 18:25:05 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:25:05 [INFO]: Teachers list retrieved
+2026-02-05 18:25:05 [INFO]: GET /teachers - Status: 304 - Duration: 54ms
+2026-02-05 18:25:05 [INFO]: Messages retrieved
+2026-02-05 18:25:05 [INFO]: GET / - Status: 304 - Duration: 195ms
+2026-02-05 18:25:05 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:25:06 [INFO]: Messages retrieved
+2026-02-05 18:25:06 [INFO]: GET / - Status: 304 - Duration: 256ms
+2026-02-05 18:25:13 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:25:13 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:25:13 [INFO]: Teachers list retrieved
+2026-02-05 18:25:13 [INFO]: GET /teachers - Status: 304 - Duration: 227ms
+2026-02-05 18:25:13 [INFO]: GET /api/teachers - IP: ::1
+2026-02-05 18:25:13 [INFO]: Teachers list retrieved
+2026-02-05 18:25:13 [INFO]: GET /teachers - Status: 304 - Duration: 94ms
+2026-02-05 18:25:13 [INFO]: Messages retrieved
+2026-02-05 18:25:13 [INFO]: GET / - Status: 304 - Duration: 390ms
+2026-02-05 18:25:13 [INFO]: GET /api/messages - IP: ::1
+2026-02-05 18:25:13 [INFO]: Messages retrieved
+2026-02-05 18:25:13 [INFO]: GET / - Status: 304 - Duration: 296ms
+2026-02-05 18:45:55 [INFO]: MongoDB reconnected
+2026-02-05 18:46:03 [INFO]: 🚀 Server running on PORT 8000
+2026-02-05 18:46:06 [INFO]: ✅ MongoDB Connected Successfully

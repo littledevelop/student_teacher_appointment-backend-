@@ -83,7 +83,7 @@ const register = async (req, res) => {
 
     return res.status(201).json({
       success: true,
-      message: "Registeration is successfully",
+      message: "Registration successful",
       user: userResponse,
       token,
     });
