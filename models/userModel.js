@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema(
     },
     approved: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     // Teacher fields
     department: { type: String, default: "" },
