@@ -33,7 +33,8 @@ const register = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     // Admin is always approved. Others: approved by default (set AUTO_APPROVE_USERS=false to require admin approval)
-    const approvedBoolean = role === "admin" || process.env.AUTO_APPROVE_USERS !== "false";
+    const approvedBoolean = role === "admin" ? true : false;
+
 
     const newUser = new userModel({
       name,
