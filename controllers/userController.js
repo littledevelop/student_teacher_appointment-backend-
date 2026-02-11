@@ -5,14 +5,18 @@ import axios from "axios";
 import logger from "../logger/logger.js";
 const register = async (req, res) => {
   try {
-    const { name, email, password, role, department, subject, specialization, officeHours, bio, studentId, year, course } = req.body;
+    const {
+      name, email, password, role,
+      department, subject, specialization, officeHours, bio,
+      studentId, year, course
+    } = req.body;
 
     if (!name || !email || !password || !role)
       return res
         .status(400)
-        .json({ success: false, message: "All Fields are required" });
+        .json({ success: false, message: "Name, email, password and role are required" });
 
-    // Additional validation for teachers
+    // Additional validation only for teachers
     if (role === 'teacher' && (!department || !subject)) {
       return res
         .status(400)
@@ -28,8 +32,8 @@ const register = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    // Set approval based on role: admins are auto-approved, others need approval
-    const approvedBoolean = role === "admin" ? true : false;
+    // Admin is always approved. Others: approved by default (set AUTO_APPROVE_USERS=false to require admin approval)
+    const approvedBoolean = role === "admin" || process.env.AUTO_APPROVE_USERS !== "false";
 
     const newUser = new userModel({
       name,
@@ -53,7 +57,7 @@ const register = async (req, res) => {
 
     //generater json jwt token
 
-    const token = jwt.sign(
+    const token = approvedBoolean ? jwt.sign(
       {
         userId: newUser._id,
         email: newUser.email,
@@ -63,7 +67,7 @@ const register = async (req, res) => {
       {
         expiresIn: "7d",
       }
-    );
+    ): null;
 
     res.cookie("token",token, {
       httpOnly: true,
@@ -83,7 +87,9 @@ const register = async (req, res) => {
 
     return res.status(201).json({
       success: true,
-      message: "Registration successful",
+      message:  role !== "admin"
+      ? "Registration successful. Waiting for admin approval."
+      : "Registration successful",
       user: userResponse,
       token,
     });
@@ -110,7 +116,8 @@ const login = async (req, res) => {
         .json({ success: false, message: "All fields are required" });
     }
 
-    const user = await userModel.findOne({email});
+    const user = await userModel.findOne({ email });
+
     if (!user) {
       logger.warn('Login attempt with invalid email', {
         email
@@ -120,13 +127,13 @@ const login = async (req, res) => {
         .json({ success: false, message: "Invalid Credentials" });
     }
 
-    if(!user.approved) {
+    if (user.approved === false) {
       logger.warn('Login attempt by unapproved user', {
         userId: user._id,
         email,
         role: user.role
       });
-      return res.status(401).json({success:false,message:"Admin Approval Required"});
+      return res.status(401).json({ success: false, message: "Admin Approval Required" });
     }
 
     const isPasswordValid = await bcrypt.compare(password,user.password);

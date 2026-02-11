@@ -5,7 +5,7 @@ const sendMessage = async (req, res) => {
   try {
     const { receiver, subject, content, appointment } = req.body;
     const sender = req.user.id;
-    console.log(sender)
+
     // Validation
     if (!receiver || !subject || !content) {
       return res.status(400).json({
@@ -26,8 +26,9 @@ const sendMessage = async (req, res) => {
     const newMessage = new Message({
       sender,
       receiver,
-      subject,
-      content,
+      subject: subject || "",
+      content: content || "",
+      message: content || "",
       appointment: appointment || undefined,
     });
 
@@ -86,7 +87,8 @@ const getMessages = async (req, res) => {
       .populate('appointment', 'date time purpose status')
       .sort({ createdAt: -1 })
       .skip(skip)
-      .limit(parseInt(limit));
+      .limit(parseInt(limit))
+      .lean();
 
     const total = await Message.countDocuments(query);
 
@@ -218,32 +220,38 @@ const getUnreadCount = async (req, res) => {
 
 const getConversations = async (req, res) => {
   try {
-    const userId = req.user.id;
-    const { page = 1, limit = 20 } = req.query;
+    const rawUserId = req.user.id;
+    const userId = mongoose.Types.ObjectId.isValid(rawUserId)
+      ? new mongoose.Types.ObjectId(rawUserId)
+      : rawUserId;
+    const userIdStr = String(rawUserId);
+    const { page = 1, limit = 50 } = req.query;
 
-    // Get all messages involving the user
+    // Get all messages involving the user (inbox + sent)
     const messages = await Message.find({
       $or: [
         { sender: userId },
         { receiver: userId }
       ]
     })
-    .populate('sender', 'name email role')
-    .populate('receiver', 'name email role')
-    .sort({ createdAt: -1 });
+      .populate('sender', 'name email role')
+      .populate('receiver', 'name email role')
+      .sort({ createdAt: -1 })
+      .lean();
 
-    // Group messages by conversation (other participant)
     const conversationsMap = new Map();
 
-    messages.forEach(message => {
-      const otherUser = message.sender._id.toString() === userId.toString()
-        ? message.receiver
-        : message.sender;
+    messages.forEach((message) => {
+      const senderId = message.sender?._id?.toString?.() || message.sender?.toString?.();
+      const receiverId = message.receiver?._id?.toString?.() || message.receiver?.toString?.();
+      if (!senderId || !receiverId) return;
 
-      const conversationKey = otherUser._id.toString();
+      const otherUser = senderId === userIdStr ? message.receiver : message.sender;
+      const otherId = otherUser?._id?.toString?.() || String(otherUser);
+      if (!otherId) return;
 
-      if (!conversationsMap.has(conversationKey)) {
-        conversationsMap.set(conversationKey, {
+      if (!conversationsMap.has(otherId)) {
+        conversationsMap.set(otherId, {
           otherUser,
           messages: [],
           lastMessage: message,
@@ -251,29 +259,30 @@ const getConversations = async (req, res) => {
         });
       }
 
-      const conversation = conversationsMap.get(conversationKey);
+      const conversation = conversationsMap.get(otherId);
       conversation.messages.push(message);
 
-      // Count unread messages
-      if (message.receiver._id.toString() === userId.toString() && !message.isRead) {
+      if (receiverId === userIdStr && !message.isRead) {
         conversation.unreadCount++;
       }
 
-      // Update last message if this is more recent
-      if (message.createdAt > conversation.lastMessage.createdAt) {
+      if (message.createdAt && conversation.lastMessage?.createdAt && new Date(message.createdAt) > new Date(conversation.lastMessage.createdAt)) {
         conversation.lastMessage = message;
       }
     });
 
-    // Convert to array and sort by last message time
     const conversations = Array.from(conversationsMap.values())
-      .map(conv => ({
+      .map((conv) => ({
         otherUser: conv.otherUser,
         lastMessage: conv.lastMessage,
         unreadCount: conv.unreadCount,
         messageCount: conv.messages.length
       }))
-      .sort((a, b) => b.lastMessage.createdAt - a.lastMessage.createdAt);
+      .sort((a, b) => {
+        const tA = a.lastMessage?.createdAt ? new Date(a.lastMessage.createdAt).getTime() : 0;
+        const tB = b.lastMessage?.createdAt ? new Date(b.lastMessage.createdAt).getTime() : 0;
+        return tB - tA;
+      });
 
     // Pagination
     const startIndex = (page - 1) * limit;
@@ -312,7 +321,6 @@ const getConversationMessages = async (req, res) => {
     const { otherUserId } = req.params;
     const { page = 1, limit = 50 } = req.query;
 
-    // Validate otherUserId
     if (!mongoose.Types.ObjectId.isValid(otherUserId)) {
       return res.status(400).json({
         success: false,
@@ -321,11 +329,12 @@ const getConversationMessages = async (req, res) => {
     }
 
     const skip = (page - 1) * limit;
+    const otherId = new mongoose.Types.ObjectId(otherUserId);
 
     const messages = await Message.find({
       $or: [
-        { sender: userId, receiver: otherUserId },
-        { sender: otherUserId, receiver: userId }
+        { sender: userId, receiver: otherId },
+        { sender: otherId, receiver: userId }
       ]
     })
     .populate('sender', 'name email role')
@@ -336,14 +345,13 @@ const getConversationMessages = async (req, res) => {
 
     const total = await Message.countDocuments({
       $or: [
-        { sender: userId, receiver: otherUserId },
-        { sender: otherUserId, receiver: userId }
+        { sender: userId, receiver: otherId },
+        { sender: otherId, receiver: userId }
       ]
     });
 
-    // Mark messages as read
     await Message.updateMany(
-      { sender: otherUserId, receiver: userId, isRead: false },
+      { sender: otherId, receiver: userId, isRead: false },
       { isRead: true, readAt: new Date() }
     );
 

@@ -2,57 +2,28 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
   {
-    name: {
-      type: String,
-      required: true,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique:true,
-    },
-    password: {
-      type: String,
-      required: true,
-    },
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
     role: {
       type: String,
-      enum: ["admin", "student", "teacher"],
-      required: true,
-      default:"student",
+      enum: ["student", "teacher", "admin"],
+      default: "student",
     },
     approved: {
       type: Boolean,
-      default: false,
+      default: true,
     },
-    // Additional fields for teachers
-    department: {
-      type: String,
-      required: function() { return this.role === 'teacher'; }
-    },
-    subject: {
-      type: String,
-      required: function() { return this.role === 'teacher'; }
-    },
-    specialization: {
-      type: String,
-    },
-    officeHours: {
-      type: String,
-    },
-    bio: {
-      type: String,
-    },
-    // Additional fields for students
-    studentId: {
-      type: String,
-    },
-    year: {
-      type: String,
-    },
-    course: {
-      type: String,
-    },
+    // Teacher fields
+    department: { type: String, default: "" },
+    subject: { type: String, default: "" },
+    specialization: { type: String, default: "" },
+    officeHours: { type: String, default: "" },
+    bio: { type: String, default: "" },
+    // Student fields
+    studentId: { type: String, default: "" },
+    year: { type: String, default: "" },
+    course: { type: String, default: "" },
   },
   { timestamps: true }
 );
