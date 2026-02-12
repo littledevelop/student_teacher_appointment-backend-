@@ -11,11 +11,12 @@ import {
   deleteUser
 } from "../controllers/userController.js";
 import { protect, adminOnly } from "../middlewares/authMiddleware.js";
+import upload from "../middlewares/uploadMiddleware.js";
 
 const userRoutes = express.Router();
 
 // Public routes
-userRoutes.post('/register', register);
+userRoutes.post('/register', upload.single('profilePicture'), register);
 userRoutes.post('/login', login);
 userRoutes.post('/forgotPassword', forgotPassword);
 userRoutes.put('/resetPassword/:token', resetPassword);

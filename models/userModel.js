@@ -14,6 +14,10 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    profilePicture: {
+      type: String,
+      default: "",
+    },
     // Teacher fields
     department: { type: String, default: "" },
     subject: { type: String, default: "" },
