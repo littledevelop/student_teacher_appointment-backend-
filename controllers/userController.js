@@ -5,8 +5,8 @@ import jwt from "jsonwebtoken";
 /* ==============================
    Generate JWT Token
 ============================== */
-const generateToken = (id) => {
-  return jwt.sign({ userId: id }, process.env.JWT_SECRET, {
+const generateToken = (id, role) => {
+  return jwt.sign({ userId: id, role }, process.env.JWT_SECRET, {
     expiresIn: "7d",
   });
 };
@@ -75,7 +75,7 @@ export const register = async (req, res) => {
       course,
     });
 
-    const token = generateToken(newUser._id);
+    const token = generateToken(newUser._id, newUser.role);
 
     res.status(201).json({
       success: true,
@@ -132,7 +132,7 @@ export const login = async (req, res) => {
       });
     }
 
-    const token = generateToken(user._id);
+    const token = generateToken(user._id, user.role);
 
     res.status(200).json({
       success: true,
